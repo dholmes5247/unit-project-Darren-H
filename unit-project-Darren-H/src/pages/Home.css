@@ -1,0 +1,67 @@
+.home-page {
+  padding: 2rem;
+}
+
+/* Layout for the two columns */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Welcome text on the left */
+#welcome-text {
+  flex: 1;
+}
+
+/* Right side: image + leaderboard */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+}
+
+/* Image styling */
+#andornot img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Leaderboard right under image */
+.leaderboard-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.leaderboard-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+/* Background image behind the leaderboard */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  object-fit: center;
+  opacity: 0.8; /* You can tweak this */
+  z-index: 0;
+  border-radius: 8px;
+}
+
+/* Leaderboard content layered above */
+.leaderboard-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent background for readability */
+  border-radius: 8px;
+}
