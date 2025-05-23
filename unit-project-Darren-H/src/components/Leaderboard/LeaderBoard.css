@@ -1,16 +1,76 @@
-.leaderboard {
-  padding: 1rem;
-  max-width: 600px;
-  margin: auto;
+.leaderboard-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+
 }
 
-table {
+.leaderboard-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
   width: 100%;
-  border-collapse: collapse;
+
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+.leaderboard {
+  flex: 1;
+}
+
+.quote-box {
+  flex: 1;
+  max-width: 300px;
+}
+
+.einstein-quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+
+
+.albert-image {
+  margin-top: 0px;
+}
+
+.albert-img {
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+
+.albert-image:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: grayscale(0%) contrast(120%);
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard thead th {
+    
+    padding: 5px;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid #afafaf;
+}
+
+.leaderboard tbody td {
+  padding: 10px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leaderboard tbody tr:nth-child(odd) {
+  background-color: #fafafa;
 }

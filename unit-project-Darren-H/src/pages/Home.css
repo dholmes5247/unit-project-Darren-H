@@ -23,14 +23,14 @@
   flex: 1;
 }
 
-/* Image styling */
 #andornot img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-/* Leaderboard right under image */
+
+
 .leaderboard-wrapper {
   margin-top: 1rem;
   width: 100%;
@@ -40,19 +40,19 @@
 .leaderboard-container {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin-top: 1rem;
 }
 
-/* Background image behind the leaderboard */
+
 .background-image {
   position: absolute;
-  top: 0;
+  top: 1;
   left: 0;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: center;
-  opacity: 0.8; /* You can tweak this */
+  opacity: 0.5; 
   z-index: 0;
   border-radius: 8px;
 }

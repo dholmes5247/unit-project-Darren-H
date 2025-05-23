@@ -1,12 +1,54 @@
+import React from 'react';
+import darrenMug from '../assets/images/darrenMug.jpg'; 
+import './About.css'; 
+
 function About() {
+
   return (
-    <section>
-      <h2>About This App</h2>
-      <p>This app aims to connect learners with materials that can reinforce their learning
-      through true/false questions and instant feedback.  In my Launchcode course we play a game called "kahoot"
-      that helps reinforce knowledge covered in the modules and it is beneficial.  I hoped putting together a version
-      of that would help me learn in doing and coming up with questions.</p>
+
+    <section className="about-section">
+
+      <h2>About Me & This App:</h2>
+      <p>
+        This app aims to connect learners with materials that can reinforce their learning
+        through true/false questions and instant feedback.
+        <br /><br />
+        In my LaunchCode course, we play a game called <em>Kahoot</em> to reinforce knowledge
+        from the modules — its been incredibly beneficial for me. I built this app to learn
+        by doing and to share a tool that might help others too.  I have ideas for many add-ons
+        including: more questions, different subject areas, more links to external sites etc.  
+        If you have any  ideas please email me using the link below in the footer.
+        <br /><br />
+        Just like watching film and running practices from my coaching days, building websites helps me
+        understand what I have been learning and tie it all together.  You never know what you
+        will find within projects...
+      </p>
+
+  <div className='about-content'>
+
+      <a href="https://www.linkedin.com/in/darren-holmes-372737114/" 
+      className="secret-link" 
+      title='Click Me for my LinkedIn Profile'
+      target="_blank">
+        <img src={darrenMug} alt="Do you want to take a trip?" />
+
+      </a>
+
+    <div className="career-experience">
+      <ul>Career Experience:</ul>
+        <li>Strategic Account Manager, Equifax</li>
+        <li>Mortgage Consultant, State Farm </li> 
+        <li>Commercial Diver & Project Manager, Cal Dive International</li>
+        <li>Defensive Coordinator, French National Team - FFFA</li>
+        <li>Head Football Coach, Les Argonautes d'Aix en Provence, France </li>
+        <li>Assistant Coach & Assistant Video Coordinator, Kansas State University </li>
+        <li>Student Coach & Graduate Assistant, Kansas State University</li>
+    </div> 
+
+  </div>
     </section>
+
+
   );
 }
 

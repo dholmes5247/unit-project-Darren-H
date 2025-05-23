@@ -18,7 +18,7 @@ const Header = () => {
     <header className="site-header">
       <nav className="navbar">
         {/* Show welcome message if logged in */}
-        {isAuthenticated && <span className="welcome-message">Welcome, {userName}!</span>}
+        {isAuthenticated && <span className="welcome-message">Welcome to Boolean || Learning, <b>{userName}</b>!</span>}
         {!isAuthenticated && <span>Welcome to Boolean || Learning -- Please sign in:</span>}
 
         <ul className="nav-links">

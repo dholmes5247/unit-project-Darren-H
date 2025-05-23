@@ -1,0 +1,34 @@
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.secret-link img {
+  max-width: 175px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.career-experience {
+  flex: 1;
+  font-size: 1rem;
+  
+}
+
+.career-experience ul {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: large;
+  text-decoration: underline;
+}
+
+.career-experience li {
+  margin-bottom: 0.3rem;
+}
+
+a:hover {
+    transform: scale(1.25);
+    transition: transform 0.3s;
+}

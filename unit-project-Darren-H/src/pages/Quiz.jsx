@@ -31,24 +31,36 @@ useEffect(() => {
 
   return (
     <section>
-      <h2>BOOlean Quiz Time!</h2>
+      <h2>BOOlean || Quiz Time!</h2>
+      <br/>
 
       {quizFinished ? (
         <div>
-          <p>Quiz completed! Your score: {score}</p>
-          <button onClick={handleRetakeQuiz}>Retake Quiz</button>
+          <p>Felicitaions, Quiz completed!&nbsp; You had: <b>{score}</b>, answers Correct!</p>
+          <br/>
+          <br/>
+
+          <button onClick={handleRetakeQuiz}>Retake Quiz?</button>
           <a href="/leaderboard" style={{ display: 'inline-block', marginLeft: '1rem' }}>
-            View Leaderboard
+            View CurrentLeaderboard
           </a>
+         
         </div>
+
       ) : (
         <QuestionList
           score={score}
           setScore={setScore}
           setQuizFinished={setQuizFinished}
         />
+
       )}
+
+      <br/>
+      <br/>
+
     </section>
+  
   );
 }
 

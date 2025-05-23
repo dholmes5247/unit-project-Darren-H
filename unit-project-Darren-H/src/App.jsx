@@ -22,7 +22,7 @@ const [leaderboard, setLeaderboard] = useState(() => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/SignUpForm" element={<SignUpForm />} />
-          <Route path="/leaderboard" element={<Leaderboard leaderboard={leaderboard} />} />
+          <Route path="/leaderboard" element={<Leaderboard leaderboard={leaderboard} showImage={true}/>} />
           {/*  Wrap protected page */}
           <Route
             path="/quiz"
