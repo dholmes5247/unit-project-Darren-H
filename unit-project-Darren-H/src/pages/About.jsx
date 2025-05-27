@@ -6,10 +6,10 @@ function About() {
 
   return (
 
-    <section className="about-section">
+  <section className="about-section">
 
-      <h2>About Me & This App:</h2>
-      <p>
+      <h2>&nbsp;About Me & This App:&nbsp; </h2>
+      <p className="about">
         This app aims to connect learners with materials that can reinforce their learning
         through true/false questions and instant feedback.
         <br /><br />
@@ -41,7 +41,7 @@ function About() {
         <li>Commercial Diver & Project Manager, Cal Dive International</li>
         <li>Defensive Coordinator, French National Team - FFFA</li>
         <li>Head Football Coach, Les Argonautes d'Aix en Provence, France </li>
-        <li>Assistant Coach & Assistant Video Coordinator, Kansas State University </li>
+        <li>Assistant Coach & Assistant Video Coord, Kansas State University </li>
         <li>Student Coach & Graduate Assistant, Kansas State University</li>
     </div> 
 

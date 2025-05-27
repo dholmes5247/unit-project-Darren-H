@@ -1,3 +1,4 @@
+import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -9,6 +10,8 @@ import SignUpForm from './components/SignUpForm/SignUpForm';
 import ProtectedRoute from './components/ProtectedRoute'; 
 import Leaderboard from './components/Leaderboard/Leaderboard';
 
+
+
 function App() {
 const [leaderboard, setLeaderboard] = useState(() => {
   return JSON.parse(localStorage.getItem('leaderboard')) || [];
@@ -16,13 +19,14 @@ const [leaderboard, setLeaderboard] = useState(() => {
 
   return (
     <div className="app-container">
+
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/SignUpForm" element={<SignUpForm />} />
-          <Route path="/leaderboard" element={<Leaderboard leaderboard={leaderboard} showImage={true}/>} />
+          <Route path="/leaderboard" element={<Leaderboard leaderboard={leaderboard} showImage={true} showQuote={true} />} />
           {/*  Wrap protected page */}
           <Route
             path="/quiz"

@@ -37,6 +37,7 @@
 .footer-links .nav-links li {
   display: inline-block;
   margin-left: .5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
 }
 
 .footer-links a {
@@ -51,4 +52,30 @@
 .footer-text {
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 750px) {
+  .header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+head {
+    display: none;
 }

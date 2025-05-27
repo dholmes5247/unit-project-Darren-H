@@ -18,8 +18,18 @@ const Header = () => {
     <header className="site-header">
       <nav className="navbar">
         {/* Show welcome message if logged in */}
-        {isAuthenticated && <span className="welcome-message">Welcome to Boolean || Learning, <b>{userName}</b>!</span>}
-        {!isAuthenticated && <span>Welcome to Boolean || Learning -- Please sign in:</span>}
+       {isAuthenticated && (
+      <span className="welcome-message">
+      <span className="app-title">Welcome to Boolean || Learning</span><br />  <u><b>{userName}</b></u>!
+      </span>
+)}
+
+        {!isAuthenticated && (
+        <span className="welcome-message">
+        <span className="app-title">Welcome to Boolean || Learning</span><br />  <span className="sign-in-prompt"><u>Please sign in:</u></span>
+        </span>
+)}
+
 
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>

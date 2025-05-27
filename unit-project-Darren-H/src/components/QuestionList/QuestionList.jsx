@@ -7,7 +7,7 @@ const questionBank = [
   { id: 2, text: "JavaScript is a compiled language.", answer: false },
   { id: 3, text: "JavaScript does NOT use Implicit Conversion.", answer: false },
   { id: 4, text: "A boolean represents a true or false logical value.", answer: true },
-
+/*
   { id: 5, text: "Void tags always need a closing tag.", answer: false },
   { id: 6, text: " The <div> tag is a generic container for grouping elements.", answer: true },
   { id: 7, text: "It's a Best practice to place any <script> before closing </body> (thinkPageLoad).", answer: true },
@@ -17,6 +17,7 @@ const questionBank = [
   { id: 10, text: "Dynamic UI, reusable code, & cross-platform development are all advantages of React?", answer: true },
   { id: 11, text: "Props allow you to pass data from a parent component to a child component?", answer: true },
   { id: 12, text: "JavaScript map method allows you to transform arrays into JSX elements?", answer: true },
+*/
 ];
 
 function QuestionList({ score, setScore, setQuizFinished }) {

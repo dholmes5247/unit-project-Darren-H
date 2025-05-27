@@ -1,64 +1,71 @@
 import React, { useState, useEffect } from 'react';
-import Leaderboard from '../components/Leaderboard/Leaderboard'; // adjust the path as needed
-import './Home.css'; // optional, your custom styling
-import image from '../assets/images/andornot.png';
+import Leaderboard from '../components/Leaderboard/Leaderboard';  
+import trueFalseImage from '../assets/images/trueFalseImage.jpg';
+import './Home.css';
 
 function Home() {
   const [leaderboard, setLeaderboard] = useState([]);
 
-  // Load leaderboard from localStorage
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('leaderboard')) || [];
     setLeaderboard(stored);
   }, []);
 
-const resetLeaderboard = () => {
-  const confirmed = window.confirm("Are you Positive you want to reset the Leaderboard?");
-  if (confirmed) {
-    localStorage.removeItem('leaderboard');
-    setLeaderboard([]);
-  }
+  const resetLeaderboard = () => {
+    const confirmed = window.confirm("Are you ABSOLUTELY sure you want to reset the Leaderboard?");
+    if (confirmed) {
+      localStorage.removeItem('leaderboard');
+      setLeaderboard([]);
+    }
   };
 
   return (
     <div className="home-page">
-    <div className="top-section">
-      <section id="welcome-text">
-        <h2>Welcome to Boolean || Learning-the Quiz App!</h2>
+      
+      <div className="home-left">
+        <h2 className="home-heading">
+
+        Welcome to<br/>
+        <span className="highlighted">Boolean || Learning</span><br />
+        -The Quiz App!
+
+        </h2>
 
 
         <p>
-          Please feel free to use any of our materials for your own review. 
-          We only ask that you sign in using your name, email & the name
-          of your school or studycourse.<br />          
-    <br /> 
-          We will not send you a bunch of junk mail. If we update the
-          site with new subject availability we will let everyone know. We also 
-          use that info to keep a LeaderBoard so you can compare your performance to others.  
-          Thanks!
+          Please feel free to use any of our materials for your own review.
+          We only ask that you sign in using your name, email, and school or study course.
+          <br />
+          <br />
+          We don't send junk mail, sell your data or generally make a nuisance of ourselves. We use your info to track progress and show leaderboard results.
+          Thanks for using our quiz app!
+          <br />
+          <br />
+          If you want to reset the leaderboard and challenge your freinds, click the "Reset Leaderboard" button below.
         </p>
-    <br />
 
+          <img
+          src={trueFalseImage}
+          alt="TrueFalse checked"
+          className="home-image"
+        />
 
-      </section>
+        <button className="reset-button" onClick={resetLeaderboard}>
+          Reset Leaderboard
+        </button>
+      </div>
 
-  <div className="leaderboard-container">
-    <img src={image} alt="andornot" className="background-image" />
-    <div className="leaderboard-overlay">
-      <Leaderboard leaderboard={leaderboard} showImage={false} />
-
-      <button className="reset-button" onClick={resetLeaderboard}>
-         LeaderBoard Reset
-      </button>
+      <div className="home-right">
+        <Leaderboard leaderboard={leaderboard} showImage={false} showQuote={false} />
+      </div>
 
     </div>
-  </div>
-
-    </div>
-  </div>
   );
 }
 
 export default Home;
+
+
+
 
 

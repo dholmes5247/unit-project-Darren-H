@@ -34,6 +34,8 @@ const SignUpForm = () => {
       newErrors.schoolName = 'School Name is required.';
     } else if (formData.schoolName.length < 3) {
       newErrors.schoolName = 'School Name must have at least 3 letters.';
+    } else if (formData.schoolName.length > 15) {
+      newErrors.schoolName = 'School Name must be no more than 15 characters.';
     }
 
     return newErrors;
@@ -41,14 +43,11 @@ const SignUpForm = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-
-    // Clear error on field change
     setErrors({ ...errors, [e.target.name]: '' });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const validationErrors = validate();
 
     if (Object.keys(validationErrors).length > 0) {
@@ -60,42 +59,51 @@ const SignUpForm = () => {
   };
 
   return (
-    <form className="signup-form" onSubmit={handleSubmit} noValidate>
-      <h2>Sign In</h2>
+    <div className="signup-form-container">
+      <form className="signup-form" onSubmit={handleSubmit} noValidate>
+        <h2>Sign In</h2>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      {errors.name && <span className="error">{errors.name}</span>}
+        <div className="form-group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <span className="error">{errors.name}</span>}
+        </div>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      {errors.email && <span className="error">{errors.email}</span>}
+        <div className="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <span className="error">{errors.email}</span>}
+        </div>
 
-      <input
-        type="text"
-        name="schoolName"
-        placeholder="Name of School"
-        value={formData.schoolName}
-        onChange={handleChange}
-      />
-      {errors.password && <span className="error">{errors.password}</span>}
+        <div className="form-group">
+          <input
+            type="text"
+            name="schoolName"
+            placeholder="Name of School"
+            value={formData.schoolName}
+            onChange={handleChange}
+          />
+          {errors.schoolName && <span className="error">{errors.schoolName}</span>}
+        </div>
 
-      <button type="submit">Sign In</button>
-    </form>
+        <button type="submit" className="submit-button">Sign In</button>
+      </form>
+    </div>
   );
 };
 
 export default SignUpForm;
+
 
 
 

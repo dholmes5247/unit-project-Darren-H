@@ -30,12 +30,12 @@ useEffect(() => {
   };
 
   return (
-    <section>
-      <h2>BOOlean || Quiz Time!</h2>
+    <section className="quiz-page">
+      <h2 className='quiz-header'>BOOlean || Quiz Time!</h2>
       <br/>
 
       {quizFinished ? (
-        <div>
+        <div className='quiz-goodbye'>
           <p>Felicitaions, Quiz completed!&nbsp; You had: <b>{score}</b>, answers Correct!</p>
           <br/>
           <br/>
