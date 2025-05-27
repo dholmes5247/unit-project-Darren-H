@@ -42,7 +42,7 @@ function QuestionList({ score, setScore, setQuizFinished }) {
       setAnswered(false);
       setUserAnswer(null);
     } else {
-      // ✅ Final question reached — mark quiz as complete
+      // Final question reached — mark quiz as complete
       setQuizFinished(true);
     }
   };
