@@ -1,67 +1,61 @@
-main {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 p {
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Home container layout */
+
 .home-page {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Image home-left section */
-.home-image {
-  width: 100%;              
-  max-width: 100%;        
-  margin: .5rem 0;         
-  border-radius: 8px;       
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
-}
-
-
-
-/* Left and right sections */
+/* Left and Right Columns */
 .home-left,
 .home-right {
-  flex: .5;
-  min-width: 320px;
+  flex: 0.5;                /* Each takes up half of the row */
+  min-width: 320px;         /* Prevents items from getting too narrow */
   box-sizing: border-box;
 }
 
+/* Home Left: Heading & Text */
 .home-left {
   max-width: 320px;
-  padding: .05rem;
+  padding: 0.5rem;
 }
 
 .home-left h2 {
-  font-size: 1.70rem;
-  padding: px;
+  font-size: 1.7rem;
   line-height: 1.25;
   text-align: center;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
-/* Leaderboard container on the right */
+/* true-false image */
+.home-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Right- Leaderboard */
 .home-right {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: .5rem;
-  box-sizing: border-box;
+  padding: 0.5rem;
 }
 
-/* Leaderboard styling */
+/* Leaderboard Table */
 .leaderboard {
   width: 100%;
   max-width: 600px;
@@ -70,7 +64,6 @@ p {
   text-align: left;
 }
 
-/* Table column spacing */
 .leaderboard th,
 .leaderboard td {
   padding: 12px 15px;
@@ -80,16 +73,16 @@ p {
   min-width: 130px;
 }
 
-/* Reset button styling */
+/* Reset Button */
 .reset-button {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   padding: 0.5rem 1.2rem;
   background-color: rgb(206, 41, 41);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .reset-button:hover {
@@ -98,7 +91,6 @@ p {
 }
 
 
-/* Mobile responsiveness */
 @media (max-width: 930px) {
   .home-page {
     flex-direction: column;
@@ -109,13 +101,12 @@ p {
   .home-right {
     max-width: 100%;
     width: 100%;
-
   }
 
   .leaderboard {
     max-width: 100%;
-    
   }
 }
+
 
 

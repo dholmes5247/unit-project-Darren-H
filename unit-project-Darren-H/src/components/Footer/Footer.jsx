@@ -1,26 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/rubeGoldbergStapler.png';
 import './Footer.css';
-import { AuthContext } from '../../context/AuthContext'; // adjust if needed
+import { AuthContext } from '../../context/AuthContext';
 
 function Footer() {
   const { isAuthenticated, logout } = useContext(AuthContext);
 
-  const handleLogout = () => {
-    logout();
-  };
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
+
+  const handleLogout = () => logout();
 
   return (
     <footer className="footer">
       <div className="footer-content">
-
-        {/* Left side: logo */}
+        {/* Left: logo */}
         <div className="footer-left">
           <img src={logo} alt="rube-logo" className="footer-logo" />
         </div>
 
-        {/* Right side: links and text */}
+                  {/* Toggle Button */}
+          <button
+            className="dark-toggle"
+            onClick={() => setDarkMode(prev => !prev)}
+            style={{ marginTop: '1rem' }}
+          >
+            {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+          </button>
+
+        {/* Right: nav + text + toggle */}
         <div className="footer-right">
           <nav className="footer-links">
             <ul className="nav-links">
@@ -33,20 +52,20 @@ function Footer() {
               ) : (
                 <li>
                   <button className="logout-button" onClick={handleLogout}>
-                    Logout
+                    Signout
                   </button>
                 </li>
               )}
             </ul>
           </nav>
 
-          {/* Footer text under links */}
+
+
           <p className="footer-text">
             &copy; 2025 Holmes Farm LLC || <b><em>Contact me:&nbsp;&nbsp;</em></b>
             <a href="mailto:dholmes5247@hotmail.com">dholmes5247@hotmail.com</a>
           </p>
         </div>
-
       </div>
     </footer>
   );

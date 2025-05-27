@@ -8,6 +8,12 @@
   gap: 40px;
 }
 
+.leaderboard {
+  border: 2px solid black;
+   filter: brightness(0.9);
+  
+}
+
 /* Leaderboard header */
 .leaderboard h2 {
   background-color: transparent;
@@ -24,23 +30,41 @@
 .sidebar {
   flex: 0 0 300px;
   position: sticky;
-  top: 30px;
+  margin-top: 45px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
-  margin-left: 15px;
+  gap: 80px;
+  margin-left: 20px;
 }
 
 /* Quote styling */
 .quote {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #333;
-  margin: 10;
+  line-height: 1.5;
+  font-family: 'Cursive', sans-serif;
+  
+  font-size: 1.45rem;
+  color: #000000;
+  margin-top: 8;
+  text-align: center;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.09);
+  text-decoration: bolder;
+  letter-spacing: 1px;
+  
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.55);
+}
+
+.signature {
+  border: 0px solid black;
+  padding-top: 1.3rem;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.5rem;
+}
+
+/* Dark mode override */
+body.dark-mode .quote {
+  color: #ffffff;   
+ 
 }
 
 /* Image container */
@@ -54,14 +78,14 @@
   filter: grayscale(0%) contrast(120%);
 }
 
-/* Image styling */
+/* Image */
 .albert-img {
   max-width: 100%;
   border-radius: 12px;
   display: block;
 }
 
-/* Leaderboard section */
+/* Leaderboard */
 .leaderboard {
   flex: 1;
   background: #f9f9f9;
@@ -70,22 +94,19 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Table styling */
+/* Table */
 .leaderboard table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 6px;
 }
 
-.leaderboard thead {
-  background-color: #ececec;
-  text-decoration: underline;
-}
 
-.leaderboard thead th {
+.leaderboard thead {
   font-weight: bold;
-  background-color: #ececec;
-  color: #000;
+  text-decoration: underline;
+  
+  color: var(--text-color); /* This will adapt to light or dark mode */
   padding: 10px;
   text-align: left;
   font-size: 1rem;
@@ -108,16 +129,16 @@
   border-bottom: 1px solid #ddd;
 }
 
-.leaderboard tbody tr:nth-child(even) {
-  background-color: #ececec;
+.leaderboard tbody tr:nth-child(odd) {
+  background-color: #afa6a6;
 }
 
-.leaderboard tbody tr:nth-child(even) td:first-child {
+.leaderboard tbody tr:nth-child(odd) td:first-child {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.leaderboard tbody tr:nth-child(even) td:last-child {
+.leaderboard tbody tr:nth-child(odd) td:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -127,7 +148,6 @@
   cursor: default;
 }
 
-/* ✅ Mobile stacking */
 @media (max-width: 900px) {
   .leaderboard-body {
     flex-direction: column;

@@ -21,7 +21,7 @@ const [leaderboard, setLeaderboard] = useState(() => {
     <div className="app-container">
 
       <Header />
-      <main>
+      <main className="content-area">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

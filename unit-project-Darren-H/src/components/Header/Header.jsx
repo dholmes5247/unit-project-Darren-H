@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext'; // adjust if path differs
+import { AuthContext } from '../../context/AuthContext'; 
 import './Header.css';
 
 const Header = () => {
   const navigate = useNavigate();
 
-  // ✅ Destructure everything from context
-  const { isAuthenticated, userName, logout } = useContext(AuthContext);
+ 
+  const { isAuthenticated, userName, logout } = useContext(AuthContext); // get from AuthContext: check user logged in, username, and logout function
 
+
+  // Handle logout: call logout function, navigate to SignUpForm
   const handleLogout = () => {
     logout();
     navigate('/SignUpForm');
@@ -20,13 +22,18 @@ const Header = () => {
         {/* Show welcome message if logged in */}
        {isAuthenticated && (
       <span className="welcome-message">
-      <span className="app-title">Welcome to Boolean || Learning</span><br />  <u><b>{userName}</b></u>!
+      <span className="app-title">Welcome to Boolean || Learning</span>
+      <br /> 
+      <div className="userName"> 
+      {userName}!
+      </div>
+
       </span>
 )}
 
         {!isAuthenticated && (
         <span className="welcome-message">
-        <span className="app-title">Welcome to Boolean || Learning</span><br />  <span className="sign-in-prompt"><u>Please sign in:</u></span>
+        <span className="app-title">Welcome to Boolean || Learning</span><br />  <span className="sign-in-prompt">Please sign in:</span>
         </span>
 )}
 
@@ -36,12 +43,14 @@ const Header = () => {
           <li><Link to="/quiz">Quiz</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/leaderboard">Leaderboard</Link></li>
+
+{/* Show sign-in or sign-out button based on authentication status */}          
           {!isAuthenticated ? (
             <li><Link to="/SignUpForm">SignIn</Link></li>
           ) : (
             <li>
               <button className="logout-button" onClick={handleLogout}>
-                Logout
+                Signout
               </button>
             </li>
           )}

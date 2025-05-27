@@ -3,21 +3,26 @@ import './Leaderboard.css';
 import albertTongue from '../../assets/images/Albert__tongue.jpg';
 
 
+/*
+ - leaderboard: array of { name, score, schoolName }
+ - showImage: whether to show Einstein image (default: false)
+ - showQuote: whether to show Einstein quote (default: false)*/ 
+
 const Leaderboard = ({ leaderboard, showImage = false, showQuote = false }) => {
   return (
     <div className="leaderboard-body">
       
-      {/* Sidebar with optional quote and image */}
+{/* Sidebar  quote and image */}
       { (showQuote || showImage) && (
         <div className="sidebar">
           {showQuote && (
-            <p className="quote">
+            <div className="quote">
               "Logic will get you from A to B, BUT
-              imagination will take you everywhere."
-              <br />
-              <br />
-              - Albert Einstein
-            </p>
+              imagination will take you EVERYWHERE."
+                <div className='signature'>
+                  - Albert Einstein
+                </div>
+            </div>
           )}
           {showImage && (
             <a
@@ -29,7 +34,7 @@ const Leaderboard = ({ leaderboard, showImage = false, showQuote = false }) => {
             >
               <img
                 src={albertTongue}
-                alt="Albert Einstein being silly"
+                alt="Albert Einstein tongue"
                 className="albert-img"
               />
             </a>
@@ -37,11 +42,13 @@ const Leaderboard = ({ leaderboard, showImage = false, showQuote = false }) => {
         </div>
       )}
 
-      {/* Leaderboard table section */}
+{/* Leaderboard table section */}
       
       <section className="leaderboard">
         <h2>Leaderboard- Top 10 Results</h2>
-        {leaderboard.length === 0 ? (
+
+{/* empty state */}
+          {leaderboard.length === 0 ? (
           <p>No scores yet. Be the first!</p>
         ) : (
           <table>
@@ -55,7 +62,7 @@ const Leaderboard = ({ leaderboard, showImage = false, showQuote = false }) => {
             <tbody>
               {[...leaderboard]
                 .sort((a, b) => b.score - a.score)
-                .slice(0, 10)
+                .slice(0, 10)  
                 .map((entry, index) => (
                   <tr key={index}>
                     <td>{entry.name}</td>
