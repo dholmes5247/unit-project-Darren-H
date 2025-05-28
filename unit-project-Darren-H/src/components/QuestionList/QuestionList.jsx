@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { useState } from 'react';
 import QuestionItem from '../QuestionItem/QuestionItem';
 import './QuestionList.css';
@@ -26,6 +28,10 @@ function QuestionList({ score, setScore, setQuizFinished }) {
   const [userAnswer, setUserAnswer] = useState(null);
 
   const currentQuestion = questionBank[current];
+    
+  const navigate = useNavigate();
+
+
 
   const handleAnswer = (answer) => {
     setUserAnswer(answer);
@@ -44,6 +50,15 @@ function QuestionList({ score, setScore, setQuizFinished }) {
     } else {
       // Final question reached — mark quiz as complete
       setQuizFinished(true);
+    }
+  };
+
+
+
+  const handleQuit = () => {
+    const confirmQuit = window.confirm(`Are you TOTALLY SURE you want to exit the quiz and return to the homepage?`);
+    if (confirmQuit) {
+      navigate('/');
     }
   };
 
@@ -66,6 +81,16 @@ function QuestionList({ score, setScore, setQuizFinished }) {
           {current === questionBank.length - 1 ? 'Finish' : 'Next'}
         </button>
       )}
+
+
+{/* Quit Button */}
+      <div className='quit-button-container'>
+      <button className="quit-button" onClick={handleQuit}>
+        Quit-Return to Home
+      </button>
+      </div>
+
+
     </div>
   );
 }

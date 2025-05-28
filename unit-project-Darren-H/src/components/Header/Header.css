@@ -45,6 +45,7 @@
   list-style: none;
   display: flex;
   gap: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45);
 }
 
 .nav-links a {
@@ -53,7 +54,9 @@
 }
 
 .nav-links a:hover {
+  
   text-decoration: underline;
+  
 }
 
 /* Log out button styling */

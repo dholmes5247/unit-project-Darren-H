@@ -12,11 +12,13 @@
   border-radius: 0.5rem;
   margin-top: 1rem;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 
 .next-button:hover {
   background-color: #1a1f24;
+  transform: scale(1.1)
 }
 
 .summary {
@@ -31,4 +33,30 @@
   justify-content: space-between;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+.quit-button {
+  max-width: 175px;
+  background-color: #e74c3c;  
+  color: white;
+  border: none;
+  border-radius: 12px;  
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+  
+}
+
+.quit-button:hover {
+  background-color: #ff4500;
+  transform: scale(1.25);
+}
+
+.quit-button-container {
+  justify-content: right;
+  max-width: 500px;
+  
+display: flex;
+ justify-content: flex-end;
+ 
 }

@@ -25,7 +25,7 @@ const Header = () => {
       <span className="app-title">Welcome to Boolean || Learning</span>
       <br /> 
       <div className="userName"> 
-      {userName}!
+      --{userName}--  
       </div>
 
       </span>

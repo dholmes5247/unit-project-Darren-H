@@ -34,7 +34,7 @@ const SignUpForm = () => {
       newErrors.schoolName = 'School Name is required.';
     } else if (formData.schoolName.length < 3) {
       newErrors.schoolName = 'School Name must have at least 3 letters.';
-    } else if (formData.schoolName.length > 15) {
+    } else if (formData.schoolName.length > 20) {
       newErrors.schoolName = 'School Name must be no more than 15 characters.';
     }
 

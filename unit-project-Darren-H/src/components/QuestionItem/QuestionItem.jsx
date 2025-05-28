@@ -23,7 +23,7 @@ function QuestionItem({ question, onAnswer, isAnswered, userAnswer }) {
       </div>
       {isAnswered && (
         <p className={userAnswer === question.answer ? 'correct' : 'incorrect'}>
-          {userAnswer === question.answer ? 'Correct!' : 'Incorrect.'}
+          {userAnswer === question.answer ? 'CORRECT!' : 'INCORRECT.'}
         </p>
       )}
     </div>

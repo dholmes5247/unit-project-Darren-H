@@ -32,15 +32,15 @@ button.selected {
 }
 
 .correct {
-  color: green;
+  color: rgb(16, 182, 16);
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .incorrect {
   color: red;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .question-item {
