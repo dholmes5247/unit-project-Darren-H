@@ -1,5 +1,5 @@
 import React from 'react';
-import darrenMug from '../assets/images/darrenMug.jpg'; 
+import darrenMug from '../assets/images/darrenMug.JPG'; // Has to be .JPG rookie mistake, runs locally not on netifly
 import './About.css'; 
 
 function About() {
