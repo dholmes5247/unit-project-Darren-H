@@ -33,30 +33,29 @@
   justify-content: space-between;
   margin-bottom: 1rem;
   font-weight: bold;
+  align-items: center;
 }
 
 .quit-button {
-  max-width: 175px;
+  max-width: 250px;
   background-color: #e74c3c;  
   color: white;
   border: none;
   border-radius: 12px;  
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 
   
 }
 
 .quit-button:hover {
   background-color: #ff4500;
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
-.quit-button-container {
-  justify-content: right;
-  max-width: 500px;
+
+
+.question-item {
   
-display: flex;
- justify-content: flex-end;
- 
 }

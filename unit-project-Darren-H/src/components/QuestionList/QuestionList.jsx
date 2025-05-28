@@ -66,7 +66,15 @@ function QuestionList({ score, setScore, setQuizFinished }) {
     <div className="question-list">
       <div className="quiz-status">
         <p>Question {current + 1} of {questionBank.length}</p>
-        <p>Score: {score}</p>
+        <p>Correct Answers: {score}</p>
+
+      <div className='quit-button-container'>
+      <button className="quit-button" onClick={handleQuit}>
+        Quit to Home
+      </button>
+      </div>
+
+
       </div>
 
       <QuestionItem
@@ -84,11 +92,7 @@ function QuestionList({ score, setScore, setQuizFinished }) {
 
 
 {/* Quit Button */}
-      <div className='quit-button-container'>
-      <button className="quit-button" onClick={handleQuit}>
-        Quit-Return to Home
-      </button>
-      </div>
+
 
 
     </div>

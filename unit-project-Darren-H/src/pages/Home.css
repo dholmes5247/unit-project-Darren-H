@@ -14,18 +14,12 @@ p {
   box-sizing: border-box;
 }
 
-/* Left and Right Columns */
-.home-left,
-.home-right {
-  flex: 2.5;                /* Each takes up half of the row */
-  min-width: 320px;         /* Prevents items from getting too narrow */
-  box-sizing: border-box;
-}
+
 
 /* Home Left: Heading & Text */
 .home-left {
   max-width: 360px;
-  padding-left: 15px;
+  padding-left: 25px;
   text-align: center;
   
 }
@@ -52,7 +46,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0.5rem;
+  
+  padding-right: 25px;
 }
 
 /* Leaderboard Table */
