@@ -13,7 +13,7 @@
 
 .about-section h2 {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 2rem;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45); /* subtle shadow for a little PoP */
 }
 
@@ -79,6 +79,7 @@ h2 {
   list-style: disc;
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
   
 }
 

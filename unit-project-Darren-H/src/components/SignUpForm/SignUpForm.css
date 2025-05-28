@@ -16,12 +16,18 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
+body.dark-mode .signup-form h2 {
+  color: black;
+}
+
 /* The actual form */
 .signup-form {
   background: rgba(255, 255, 255, 0.5);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  
 }
 
 /* Each field block */
@@ -88,7 +94,7 @@
     font-size: 1rem;
     padding: 0.75rem;
   }
-  
+
 
   .submit-button {
     font-size: 1rem;

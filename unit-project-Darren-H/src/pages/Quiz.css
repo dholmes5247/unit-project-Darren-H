@@ -26,6 +26,14 @@ body.dark-mode .quiz-goodbye a {
   color: #90cdf4;
 }
 
+body.dark-mode .question-list {
+  color: #90cdf4;
+}
+
+
+
+
+
 /* Completion Message  */
 .quiz-goodbye {
   text-align: center;
@@ -67,14 +75,14 @@ body.dark-mode .quiz-goodbye a {
 .button-link {
   display: inline-block;
   font-size: 1.15rem;
-  margin-left: 2rem;
-  padding: 0.5rem 1rem;
+  margin-left: 4rem;
+  padding: 0.5rem 0.5rem;
   background-color: #007bff;
-  color: white; /* Make the text white */
+  color: rgb(249, 244, 244); /* Make the text white */
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: none;
-  transition: background-color 0.3s ease;
+  
 }
 
 .button-link:hover {
@@ -82,9 +90,7 @@ body.dark-mode .quiz-goodbye a {
   transform: scale(1.05);
 }
 
-.quiz-goodbye a:hover {
-  text-decoration: underline;
-}
+
 
 .question-item {
     background-color: rgba(40, 39, 39, 0.2); 
@@ -98,8 +104,10 @@ body.dark-mode .quiz-goodbye a {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
 }
 
+
+
 .next-button {
-    background-color: rgba(19, 19, 19, 0.5);
+    background-color: #007bff;
 }
 
 .quiz-status {
