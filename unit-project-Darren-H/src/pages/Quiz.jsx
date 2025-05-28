@@ -44,7 +44,7 @@ const handleRetakeQuiz = () => {
 
       {quizFinished ? (
         <div className='quiz-goodbye'>
-          <p>Felicitaions, Quiz completed!<br /> You had: <b>{score}</b>, answers Correct!</p>
+          <p>Felicitaions, {userName}, Quiz completed!<br /> You had: <b>{score}</b>, answers Correct!</p>
           <br/>
           <br/>
 

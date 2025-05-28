@@ -1,3 +1,4 @@
+import React from 'react';
 import './QuestionItem.css';
 
 function QuestionItem({ question, onAnswer, isAnswered, userAnswer }) {
