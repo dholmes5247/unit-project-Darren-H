@@ -3,6 +3,8 @@ import './Leaderboard.css';
 import albertTongue from '../../assets/images/Albert__tongue.jpg';
 
 
+//  Had a typo with the Leaderboard.css filename so I changed it and need to commit.  Change
+
 /*
  - leaderboard: array of { name, score, schoolName }
  - showImage: whether to show Einstein image (default: false)
