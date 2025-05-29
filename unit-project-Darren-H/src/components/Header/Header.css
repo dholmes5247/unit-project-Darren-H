@@ -39,8 +39,9 @@
 }
 
 .sign-in-prompt {
-  animation: pulse 1.2s infinite;
+  animation: pulse 2s infinite;
   font-weight: bold;
+  border-radius: 4px;
   color: #f5f542;
   font-size: 1.4rem;
   font-style: oblique;

@@ -4,9 +4,9 @@ import { AuthContext } from '../context/AuthContext';
 import './Quiz.css'; 
 
 function Quiz() {
-  const { userName, schoolName } = useContext(AuthContext); // take user imfo from AuthContext
-  const [score, setScore] = useState(0);  // Score state
-  const [quizFinished, setQuizFinished] = useState(false); // quiz complete state
+  const { userName, schoolName } = useContext(AuthContext); // COntext -take user imfo from AuthContext-glabal state
+  const [score, setScore] = useState(0);  // Uses state for the Score state
+  const [quizFinished, setQuizFinished] = useState(false); // Uses State for the quiz complete
 
 // useEffect will run at quizFinished, score, UserName, or schoolName changes
 
@@ -57,6 +57,7 @@ const handleRetakeQuiz = () => {
         </div>
 
       ) : (  // If quiz not finished, render QuestionList
+      //Using Props to access score, increment score & when quiz over
         <QuestionList
           score={score}
           setScore={setScore}

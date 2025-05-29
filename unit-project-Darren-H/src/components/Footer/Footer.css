@@ -59,6 +59,8 @@
 }
 
 .dark-toggle {
+  animation: pulse 3s infinite;
+  transition: transform 1s;
   background: rgb(141, 151, 118);
   border: 1px solid var(--text-color);
   padding: 0.5rem 1rem;
