@@ -84,10 +84,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45);
-  padding: 0;
+   padding: 0;
   margin: 0;
-  color:white;
 }
 
 .nav-links a {
@@ -101,6 +99,7 @@
 
 /* Logout button */
 .logout-button {
+  animation: pulse 2s infinite;
   background-color: #e74c3c;
   border: none;
   color: white;
@@ -111,6 +110,11 @@
 
 .logout-button:hover {
   background-color: #c0392b;
+}
+
+.signInLink {
+  animation: pulse 2s infinite;
+  border-radius: 5px;
 }
 
 

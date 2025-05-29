@@ -36,7 +36,7 @@ const Header = () => {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/leaderboard">Leaderboard</Link></li>
           {!isAuthenticated ? (
-            <li><Link to="/SignUpForm">Sign In</Link></li>
+            <li><Link to="/SignUpForm" className='signInLink'>Sign In</Link></li>
           ) : (
             <li>
               <button className="logout-button" onClick={handleLogout}>
