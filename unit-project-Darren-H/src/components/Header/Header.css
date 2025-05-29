@@ -44,6 +44,7 @@
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45);
 }
