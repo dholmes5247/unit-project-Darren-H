@@ -25,7 +25,7 @@ const Header = () => {
       <span className="app-title">Welcome to Boolean || Learning</span>
       <br /> 
       <div className="userName"> 
-      --{userName}--  
+      Good Luck - {userName}!  
       </div>
 
       </span>
@@ -33,7 +33,7 @@ const Header = () => {
 
         {!isAuthenticated && (
         <span className="welcome-message">
-        <span className="app-title">Welcome to Boolean || Learning</span><br />  <span className="sign-in-prompt">Please sign in:</span>
+        <span className="app-title">Welcome to Boolean || Learning</span><br />  <div className="sign-in-prompt">Please sign in to Continue:</div>
         </span>
 )}
 

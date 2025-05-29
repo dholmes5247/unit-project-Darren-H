@@ -12,22 +12,51 @@
   margin-top: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-left:20px;
+  opacity: 0;
+  animation: fadeInSlide 3.8s ease forwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(.85);
+  }
+  50% {
+    transform: scale(1.10);
+  }
+}
+
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(.15);
+  }
+  100% {
+    opacity: 1.0;
+    transform: translateY(20) scale(1.15);
+  }
+}
+
+.sign-in-prompt {
+  animation: pulse 1s infinite;
+  transition: transform 2.0 ease;
+  
+  font-weight: bold;
+  color:#f5f542;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-style: oblique;
+  text-decoration: underline;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .app-title {
   font-size: 1.6rem;
   font-weight: bold;
-}
-
-.sign-in-prompt {
-  color:#f5f542;
-  font-weight: bolder;
-  font-size: 1.4rem;
-  font-style: oblique;
-  text-decoration: underline;
-  margin-top: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  
 }
 
 .navbar {
