@@ -1,16 +1,12 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext'; 
+import { AuthContext } from '../../context/AuthContext';
 import './Header.css';
 
 const Header = () => {
   const navigate = useNavigate();
+  const { isAuthenticated, userName, logout } = useContext(AuthContext);
 
- 
-  const { isAuthenticated, userName, logout } = useContext(AuthContext); // get from AuthContext: check user logged in, username, and logout function
-
-
-  // Handle logout: call logout function, navigate to SignUpForm
   const handleLogout = () => {
     logout();
     navigate('/SignUpForm');
@@ -19,38 +15,32 @@ const Header = () => {
   return (
     <header className="site-header">
       <nav className="navbar">
-        {/* Show welcome message if logged in */}
-       {isAuthenticated && (
-      <span className="welcome-message">
-      <span className="app-title">Welcome to Boolean || Learning</span>
-      <br /> 
-      <div className="userName"> 
-      Good Luck - {userName}!  
-      </div>
+        {/* Welcome message */}
+        <div className="welcome-message">
+          <div className="app-title">Welcome to Boolean || Learning</div>
+          <br />
 
-      </span>
-)}
+          {isAuthenticated ? (
+            <div className="userName">Good Luck - {userName}!</div>
+          ) : (
+            <Link to="/SignUpForm" className="sign-in-prompt">
+              Please sign in to continue
+            </Link>
+          )}
+        </div>
 
-        {!isAuthenticated && (
-        <span className="welcome-message">
-        <span className="app-title">Welcome to Boolean || Learning</span><br />  <div className="sign-in-prompt">Please sign in to Continue:</div>
-        </span>
-)}
-
-
+        {/* Navigation */}
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/quiz">Quiz</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/leaderboard">Leaderboard</Link></li>
-
-{/* Show sign-in or sign-out button based on authentication status */}          
           {!isAuthenticated ? (
-            <li><Link to="/SignUpForm">SignIn</Link></li>
+            <li><Link to="/SignUpForm">Sign In</Link></li>
           ) : (
             <li>
               <button className="logout-button" onClick={handleLogout}>
-                Signout
+                Sign Out
               </button>
             </li>
           )}
@@ -61,6 +51,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 
