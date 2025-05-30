@@ -48,11 +48,13 @@ function Home() {
         </p>
 
 {/* True/false image */}
+    <a href="https://en.wikipedia.org/wiki/Boolean_data_type" target="_blank" rel="noopener noreferrer">
         <img
           src={trueFalseImage}
           alt="TrueFalse checked"
           className="home-image"
         />
+    </a>
 
 {/* reset leaderboard button */}
         <button className="reset-button" onClick={resetLeaderboard}>

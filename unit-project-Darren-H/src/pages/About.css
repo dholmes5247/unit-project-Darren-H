@@ -56,12 +56,13 @@ h2 {
 /* LinkedIn image container */
 .secret-link img {
     animation: pulse 3s infinite;
+    transition: transform 0.3s ease;
   transition: transform 1s;
   max-width: 200px;
   width: 100%;
   height: auto;
   border-radius: 12px;
-  transition: transform 0.3s ease;
+  
 
 }
 

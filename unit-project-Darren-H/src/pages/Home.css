@@ -41,6 +41,8 @@
 
 /* true-false image */
 .home-image {
+      animation: pulse 3s infinite;
+    transition: transform 0.3s ease;
   width: 95%;
   border-radius: 12px;    
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
@@ -106,6 +108,7 @@
 
   .leaderboard {
     max-width: 100%;
+    
   }
 }
 
