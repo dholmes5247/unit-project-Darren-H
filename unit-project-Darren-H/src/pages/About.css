@@ -20,7 +20,7 @@
 .about {
   font-size: 1.2rem;
   line-height: 1.3;
-  padding: 1rem;
+  
   background-color: transparent;  
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45); /* subtle shadow for a little PoP */
   width: 100%;
@@ -35,7 +35,7 @@
 
 h2 {
   
-  padding: .5rem;
+ 
   background-color: transparent;
   text-decoration: underline;
 }

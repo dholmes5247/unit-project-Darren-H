@@ -14,11 +14,24 @@
 
 .footer-left {
   flex: 1;
+  display: inline-block;
+  
 }
 
 .footer-logo {
   max-height: 100px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  display:block;
+  max-width: 100%;
+  height: auto;
+  animation: pulse 3s infinite;
+ 
+    
+}
+
+.footer-logo:hover {
+  transform: scale(1.3);   /* Grows 20% on hover */
+ 
 }
 
 .footer-right {
@@ -63,11 +76,12 @@
   transition: transform 1s;
   background: rgb(141, 151, 118);
   border: 1px solid var(--text-color);
-  padding: 0.5rem 1rem;
+  padding: .75rem 1rem;
   border-radius: 5px;
   cursor: pointer;
   color: black;
   transition: background 0.3s, color 0.3s;
+  margin-left: 40px;
 }
 
 .dark-toggle:hover {
@@ -103,8 +117,6 @@ body.dark-mode .dark-toggle {
   background-color: #c0392b;
 }
 
-head {
-    display: none;
-}
+
 
 

@@ -25,9 +25,13 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        {/* Left: logo */}
+        
         <div className="footer-left">
+        <a href="https://en.wikipedia.org/wiki/Rube_Goldberg" target="_blank" rel="noopener noreferrer">
+
           <img src={logo} alt="rube-logo" className="footer-logo" />
+        </a>
+
         </div>
 
                   {/* Toggle Button */}
