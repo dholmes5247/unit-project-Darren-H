@@ -1,12 +1,12 @@
 /* ========== Main Container ========== */
 .leaderboard-body {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 5px;
   gap: 40px;
-  overflow-x: auto
 }
 
 /* ========== Sidebar ========== */
@@ -20,18 +20,15 @@
 }
 
 .quote {
-
   font-family: 'Dancing Script', cursive;
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: bold;
   color: #000;
   line-height: 1.25;
   text-align: center;
   border-radius: 8px;
   letter-spacing: 0.5px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.55);
-  font-weight: bold;
-  
 }
 
 body.dark-mode .quote {
@@ -42,7 +39,6 @@ body.dark-mode .quote {
   font-family: 'Brush Script MT', cursive;
   font-size: 2.25rem;
   padding-top: 1.3rem;
-  
 }
 
 .albert-link {
@@ -56,7 +52,7 @@ body.dark-mode .quote {
 }
 
 .albert-img {
-    animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
   transition: transform 1s;
   max-width: 100%;
   border-radius: 12px;
@@ -74,22 +70,14 @@ body.dark-mode .quote {
   }
 }
 
-.reset-button {
-  animation: pulse 1.5s infinite;
-  transition: transform 0.2s;
-  
-}
-
 /* ========== Leaderboard ========== */
-
 .home-right {
-  
-  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+  overflow-x: auto;
 }
+
 .leaderboard {
   flex: 1;
   background: #f9f9f9;
@@ -98,20 +86,18 @@ body.dark-mode .quote {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
   filter: brightness(0.9);
+  overflow-x: auto;
 }
 
 .leaderboard h2 {
-
-  background-color: transparent;
+  background-color: rgba(175, 166, 166, 0.8);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   display: inline-block;
   font-size: 1.75rem;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  background-color: rgba(175, 166, 166, 0.8);
 }
-  
 
 /* ========== Table ========== */
 .leaderboard table {
@@ -164,23 +150,26 @@ body.dark-mode .quote {
   cursor: default;
 }
 
+/* ========== Button ========== */
+.reset-button {
+  animation: pulse 1.5s infinite;
+  transition: transform 0.2s;
+}
 
-@media (max-width: 500px) {
+/* ========== Responsive Design ========== */
+@media (max-width: 680px) {
   .leaderboard-body {
-    flex-wrap:wrap;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
   }
 
   .sidebar {
-    position: static;
     width: 100%;
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
   }
-
 
   .leaderboard {
     width: 100%;
@@ -194,3 +183,4 @@ body.dark-mode .quote {
     padding: 8px;
   }
 }
+
