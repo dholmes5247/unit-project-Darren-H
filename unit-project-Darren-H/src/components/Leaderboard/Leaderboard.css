@@ -6,6 +6,7 @@
   justify-content: flex-start;
   padding: 5px;
   gap: 40px;
+  overflow-x: auto
 }
 
 /* ========== Sidebar ========== */

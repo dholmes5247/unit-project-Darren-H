@@ -17,10 +17,13 @@
 
 /* Home Left: Heading & Text */
 .home-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
   max-width: 360px;
   padding-left: 25px;
   text-align: center;
-  
+  gap: 1rem;
   
 }
 
@@ -41,6 +44,7 @@
 
 /* true-false image */
 .home-image {
+  
       animation: pulse 3s infinite;
     transition: transform 0.3s ease;
   width: 95%;

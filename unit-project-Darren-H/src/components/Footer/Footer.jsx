@@ -27,7 +27,7 @@ function Footer() {
       <div className="footer-content">
         
         <div className="footer-left">
-        <a href="https://en.wikipedia.org/wiki/Rube_Goldberg" target="_blank" rel="noopener noreferrer">
+        <a href="https://en.wikipedia.org/wiki/Rube_Goldberg_machine" target="_blank" rel="noopener noreferrer">
 
           <img src={logo} alt="rube-logo" className="footer-logo" />
         </a>
@@ -65,10 +65,12 @@ function Footer() {
 
 
 
-          <p className="footer-text">
-            &copy; 2025 Holmes Farm LLC || <b><em>Contact me:&nbsp;&nbsp;</em></b>
+          <div className="footer-text">
+            <span>&copy; 2025 Holmes Farm LLC || <b><em>Contact me:&nbsp;&nbsp;</em></b></span>
+            <span className='email'>
             <a href="mailto:dholmes5247@hotmail.com">dholmes5247@hotmail.com</a>
-          </p>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
