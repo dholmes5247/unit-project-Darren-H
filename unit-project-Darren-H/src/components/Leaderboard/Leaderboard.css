@@ -79,14 +79,14 @@ body.dark-mode .quote {
 }
 
 .leaderboard {
-  flex: 1;
+  flex: 2;
   background: #f9f9f9;
   padding: 20px;
   border: 2px solid black;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
   filter: brightness(0.9);
-  overflow-x: auto;
+ 
 }
 
 .leaderboard h2 {
@@ -95,7 +95,7 @@ body.dark-mode .quote {
   border-radius: 0.5rem;
   display: inline-block;
   font-size: 1.75rem;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -157,18 +157,19 @@ body.dark-mode .quote {
 }
 
 /* ========== Responsive Design ========== */
-@media (max-width: 680px) {
+@media (max-width: 600px) {
   .leaderboard-body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    gap: 20px;
   }
 
   .sidebar {
     width: 100%;
     align-items: center;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0;
   }
 
   .leaderboard {
