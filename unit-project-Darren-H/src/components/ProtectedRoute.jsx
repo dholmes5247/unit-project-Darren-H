@@ -6,4 +6,4 @@ const ProtectedRoute = ({ children }) => {
   return isAuthenticated ? children : <Navigate to="/SignUpForm" replace />;
 };
 
-export default ProtectedRoute; // ✅ THIS is what was missing
+export default ProtectedRoute; //  THIS is what was missing

@@ -29,7 +29,7 @@ function Footer() {
         <div className="footer-left">
         <a href="https://en.wikipedia.org/wiki/Rube_Goldberg_machine" target="_blank" rel="noopener noreferrer">
 
-          <img src={logo} alt="rube-logo" className="footer-logo" />
+          <img src={logo} alt="rube-logo" title="Want to learn about Rube Goldberg machines?"className="footer-logo" />
         </a>
 
         </div>

@@ -91,7 +91,7 @@ function QuestionList({ score, setScore, setQuizFinished }) {
       )}
 
 
-{/* Quit Button */}
+
 
 
 

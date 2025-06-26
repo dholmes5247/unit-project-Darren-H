@@ -52,6 +52,7 @@ function Home() {
         <img
           src={trueFalseImage}
           alt="TrueFalse checked"
+          title="Want to learn about BooLeans?"
           className="home-image"
         />
     </a>
